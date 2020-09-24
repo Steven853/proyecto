@@ -1,0 +1,502 @@
+@import url(../fonts/GothamBook.css);
+@import url(../fonts/GothamBold.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://thumbs.dreamstime.com/b/fondo-transparente-de-la-teja-del-hexágono-39078934.jpg);
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+p {
+    font-family: 'arial';
+    letter-spacing: 2px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-family: arial;
+    letter-spacing: 1px;
+}
+
+span {
+    font-family: 'GothamBook';
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+.header {
+    color: #FFF;
+    background: #f8a426;
+    height: 35px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.optionsBar {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionsBar span {
+    color: #FFF;
+    font-size: 11pt;
+    font-family: 'GothamBook';
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+
+.photouser {
+    margin-left: 30px;
+    width: 25px;
+    height: 25px;
+}
+
+.close {
+    width: 25px;
+    height: 25px;
+}
+
+.optionsBar a {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-left: 30px;
+}
+
+nav ul {
+    background: #ff9900;
+    list-style: none;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+nav ul>li a {
+    position: relative;
+}
+
+nav a {
+    color: #FFF;
+    display: block;
+    font-size: 10pt;
+    font-family: 'GothamBook';
+    padding: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .5s;
+    border-right: 1px solid #ff9900;
+}
+
+nav .principal>a {
+    background: url(../images/arrow_bottom.png) no-repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto auto;
+    background-position: 94% center;
+    background-size: 10px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav li ul {
+    background: #ff99008c;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-start;
+    border-radius: 0 0 10px 10px;
+}
+
+nav li ul a {
+    position: relative;
+    padding: 10px 30px;
+    border-right: initial;
+}
+
+nav li ul a:hover {
+    background: #ff99008c;
+}
+
+nav li ul li:last-child {
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+#container {
+    padding: 90px 15px 15px;
+}
+
+
+/*****************************************************************/
+
+.form_register {
+    width: 450px;
+    margin: auto;
+}
+
+.form_register h1 {
+    color: #ffa600;
+}
+
+
+input,
+select {
+    width: 100%;
+    padding: 8px 10px;
+    background: linear-gradient(#ffffff, #6b6969);
+    border: 1px solid rgb(255, 174, 0);
+    box-shadow: 0 1px 0 rgb(255, 174, 0);
+    border-radius: 0.8em;
+    margin-bottom: 10px;
+}
+
+.notItemOne option:first-child {
+    display: none;
+}
+
+.btn_save {
+    font-size: 12pt;
+    background: #ffa600;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+    margin: 15px auto;
+}
+
+.alert {
+    width: 100%;
+    background: #ff9100c4;
+    border-radius: 6px;
+    margin: 20px auto;
+}
+
+.msg_error {
+    color: #e65656;
+}
+
+.msg_save {
+    color: #ffffff;
+}
+
+.alert p {
+    padding: 10px;
+}
+form {
+    background: #111;
+    margin: 40px auto;
+    border-radius: 0.4em;
+    border: 1px solid #020202;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 5px rgb(3, 3, 3);
+    padding: 20px 50px;
+}
+
+form:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100px;
+    left: 20%;
+    background: linear-gradient(left, #111, #444, #b6b6b8, #444, #111);
+    top: 0;
+}
+
+form:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    border-radius: 50%;
+    left: 34%;
+    top: -7px;
+    box-shadow: 0 0 6px 4px #fff;
+}
+
+.inset {
+    padding: 20px;
+    border-top: 1px solid #19191a;
+}
+
+form h1 {
+    font-family: Wallpoet;
+    font-size: 18px;
+    text-shadow: 0 1px 0 black;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+form h1:after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    pointer-events: none;
+    transform: rotate(70deg);
+    background: linear-gradient(50deg, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
+}
+
+label {
+    color: rgb(255, 255, 255);
+    display: block;
+    padding-bottom: 9px;
+    font-family: 'GothamBook';
+}
+
+input[type=text],
+input[type=submit],
+input[type=password] {
+    width: 100%;
+    padding: 8px 10px;
+    background: linear-gradient(#ffffff, #f8f6f6);
+    border: 1px solid rgb(255, 174, 0);
+    box-shadow: 0 1px 0 rgb(255, 174, 0);
+    border-radius: 0.8em;
+    margin-bottom: 10px;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 8px 10px;
+    background: linear-gradient(#ffffff, #6b6969);
+    border: 1px solid rgb(255, 174, 0);
+    box-shadow: 0 1px 0 rgb(255, 174, 0);
+    border-radius: 0.8em;
+    margin-bottom: 10px;
+}
+
+
+input[type=number] {
+    width: 100%;
+    padding: 8px 10px;
+    background: linear-gradient(#ffffff, #6b6969);
+    border: 1px solid rgb(255, 174, 0);
+    box-shadow: 0 1px 0 rgb(255, 174, 0);
+    border-radius: 0.8em;
+    margin-bottom: 10px;
+}
+
+label[for=remember] {
+    color: white;
+    display: inline-block;
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+
+/*=============== LISTA USUARIO =============*/
+
+#container h1 {
+    font-size: 35px;
+    display: inline-block;
+}
+
+.btn_new {
+    display: inline-block;
+    background: #ff9900;
+    color: #FFF;
+    padding: 5px 25px;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 12pt;
+    font-family: 'arial';
+    width: 90%;
+}
+
+table th {
+    text-align: left;
+    padding: 10px;
+    background: #ff9900;
+    color: #FFF;
+}
+
+table tr:nth-child(odd) {
+    background: #FFF;
+}
+
+table td {
+    padding: 10px;
+}
+
+.link_edit {
+    color: #ff9100;
+}
+
+.link_delete {
+    color: #b31b1b;
+}
+
+.data_delete {
+    text-align: center;
+}
+
+.data_delete h2 {
+    font-size: 12pt;
+}
+
+.data_delete span {
+    font-weight: bold;
+    color: #4f72d4;
+    font-size: 12pt;
+}
+
+.btn_cancel,
+.btn_ok {
+    width: 124px;
+    background: #478ba2;
+    color: #FFF;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.btn_cancel {
+    background: #800101;
+}
+
+.data_delete form {
+    background: initial;
+    margin: auto;
+    padding: 20px 50px;
+    border: 0;
+}
+
+
+/*============ Paginador =============*/
+
+.paginador ul {
+    padding: 15px;
+    list-style: none;
+    background: #FFF;
+    margin-top: 15px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.paginador a,
+.pageSelected {
+    color: #ff7300;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    width: 35px;
+}
+
+.paginador a:hover {
+    background: #ddd;
+}
+
+.pageSelected {
+    color: #FFF;
+    background: #ff9900;
+    border: 1px solid #ff9900;
+}
+
+
+/*============ Buscador ============*/
+
+.form_search {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    float: right;
+    background: initial;
+    padding: 9px;
+    border-radius: 9px;
+}
+
+.form_search .btn_search {
+    background: #22a310;
+    color: #FFF;
+    padding: 0 20px;
+    border: 0;
+    cursor: pointer;
+    margin-left: 10px;
+}
